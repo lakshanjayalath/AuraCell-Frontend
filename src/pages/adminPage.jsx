@@ -6,6 +6,7 @@ import { FaBoxes } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import AdminProductPage from './admin/AdminProductPage';
 import AdminAddNewProduct from './admin/AdminAddNewProduct';
+import AdminUpdateProduct from './admin/AdminUpdateProduct';
 
 export default function AdminPage() {
   return (
@@ -32,13 +33,14 @@ export default function AdminPage() {
           Users
         </Link>
       </div>
-      <div className='w-[calc(100%-300px)] h-full border-[2px] border-red-900 rounded-[20px] overflow-hidden'>
+      <div className='w-[calc(100%-300px)] h-full border-[2px] border-accent rounded-[20px] overflow-hidden'>
         <div className='h-full w-full max-w-full max-h-full overflow-y-scroll'>
           <Routes path='/'>
             <Route path='/' element={<h1>Dashboard</h1>} />
             <Route path='/products' element={ <AdminProductPage /> } />
             <Route path='/orders' element={<h1>Orders</h1>} />
             <Route path='/add-product' element={<AdminAddNewProduct />} />
+            <Route path='/update-product' element={<AdminUpdateProduct />} />
           </Routes>
         </div>
       </div>
