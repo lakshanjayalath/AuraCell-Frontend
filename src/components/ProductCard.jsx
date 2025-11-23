@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function ProductCard(props) {
     const product = props.product;
@@ -15,6 +16,16 @@ export default function ProductCard(props) {
                 {product.labelledPrice > product.price && (
                     <span className="absolute top-3 left-3 bg-accent text-white text-xs font-semibold px-2 py-1 rounded-md">
                         Sale
+                    </span>
+                )}
+                {product.stock >= 1 && (
+                    <span className="absolute top-3 right-3 bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                        In stock
+                    </span>
+                )}
+                {product.stock < 1 && (
+                    <span className="absolute top-3 right-3 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                        Out of stock
                     </span>
                 )}
             </div>
@@ -46,9 +57,9 @@ export default function ProductCard(props) {
                 </div>
 
                 {/* View Button */}
-                <button className="w-full h-[38px] mt-4 border border-accent text-accent font-medium rounded-xl hover:bg-accent hover:text-white transition-all duration-300">
+                <Link to={'/overview/'+product.productID} className="w-full h-[38px] mt-4 border border-accent text-accent font-medium rounded-xl hover:bg-accent hover:text-white transition-all duration-300 flex items-center justify-center">
                     View Product
-                </button>
+                </Link>
             </div>
         </div>
     )
