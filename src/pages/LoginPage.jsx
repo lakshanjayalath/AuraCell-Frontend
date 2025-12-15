@@ -107,9 +107,9 @@ export default function LoginPage() {
 
                     {/* Links */}
                     <div className="flex justify-between w-full text-xs sm:text-sm text-primary/80 mt-1">
-                        <a href="#" className="hover:text-accent">
+                        <Link to="/forget-password" className="hover:text-accent">
                             Forgot Password?
-                        </a>
+                        </Link>
                         <Link to="/register" className="hover:text-accent">
                             Create Account
                         </Link>
