@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { BsCart3 } from 'react-icons/bs'
 import { MdMenu } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import UserData from './UserData';
+import UserDataMobile from './UserDataMobile';
 
 export default function HomePage() {
 
@@ -50,6 +52,9 @@ export default function HomePage() {
               <a href="/cart" className="p-4 border-b border-secondary/10">
                 Cart
               </a>
+              <div className=" lg:hidden flex w-[300px] absolute bottom-[20px] left-0  justify-center items-center gap-4">
+                <UserDataMobile />
+              </div>
             </div>
           </div>
         )}
@@ -59,6 +64,10 @@ export default function HomePage() {
           <Link to="/products">Products</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+        </div>
+
+        <div className="h-full hidden lg:flex w-[200px] absolute right-[100px] top-0  justify-end items-center gap-4">
+          <UserData />
         </div>
 
         <Link
