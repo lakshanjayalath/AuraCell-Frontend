@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState, useMemo, useEffect } from "react";
-import mediaUpload from "../utils/mediaUpload";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import MediaUpload from "../utils/mediaUpload";
 
 export default function UserSettings() {
 	const [firstName, setFirstName] = useState("");
@@ -40,7 +40,7 @@ export default function UserSettings() {
             image : user.image
         }
         if(image !=null){
-            const link = await mediaUpload(image);
+            const link = await MediaUpload(image);
             image.profilePicture = link;
         }
 
