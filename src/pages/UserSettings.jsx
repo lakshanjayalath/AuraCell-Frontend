@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useMemo, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import MediaUpload from "../utils/mediaUpload";
+import MediaUpload from "../utils/MediaUpload";
 
 export default function UserSettings() {
 	const [firstName, setFirstName] = useState("");
