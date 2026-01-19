@@ -13,14 +13,14 @@ export default function HomePage() {
     <header className='w-full bg-accent h-[100px] text-white px-[40px]'>
       <div className='w-full h-full flex relative'>
 
-        <a href="/home"><img src="/logo.png" className='hidden lg:flex h-full w-[170px] left-0 object-cover absolute' /></a>
+        <a href="/"><img src="/logo.png" className='hidden lg:flex h-full w-[170px] left-0 object-cover absolute' /></a>
 
         <div className='lg:hidden w-full relative flex justify-center items-center'>
           <MdMenu
             className='absolute left-0 text-3xl'
             onClick={() => setIsSidebarOpen(true)}
           />
-          <a href="/home"><img src="/logo.png" className='h-full w-[170px] object-cover' /></a>
+          <a href="/"><img src="/logo.png" className='h-full w-[170px] object-cover' /></a>
         </div>
 
         {isSideBarOpen && (
